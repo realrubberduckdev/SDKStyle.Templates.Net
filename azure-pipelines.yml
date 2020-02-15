@@ -5,22 +5,21 @@
 
 trigger:
   - master
-  
-  pool:
-    vmImage: 'windows-latest'
-  
-  variables:
-    solution: '**/*.sln'
-    buildPlatform: 'Any CPU'
-    buildConfiguration: 'Release'
-  
-  steps:
-  - task: MSBuild@1
-    inputs:
-      solution: '$(solution)'
-      platform: '$(buildPlatform)'
-      configuration: '$(buildConfiguration)'
-      msbuildArguments: '/t:Restore /t:Rebuild /P:Version=1.0.$(Build.BuildId)'
 
-  - publish: $(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/bin/Release
-      artifact: SDKStyle.Templates.Net
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: MSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    msbuildArguments: '/t:Restore /t:Rebuild /P:Version=1.0.$(Build.BuildId)'
+- publish: $(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/bin/Release
+    artifact: SDKStyle.Templates.Net
