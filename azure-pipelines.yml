@@ -21,5 +21,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     msbuildArguments: '/t:Restore /t:Rebuild /P:Version=1.0.$(Build.BuildId)'
-- publish: $(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/bin/Release
-    artifact: SDKStyle.Templates.Net
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/bin/Release'
+    ArtifactName: 'SDKStyle.Templates.Net'
+    publishLocation: 'Container'
