@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="VSIXProject1.d94399f6-bb26-4b29-9867-7505d6d51486" Version="1.0" Language="en-US" Publisher="Dushyant Priyadarshee" />
-        <DisplayName>Rubberduckdev.ConsoleAppFrameworkSDK</DisplayName>
-        <Description xml:space="preserve">Empty VSIX Project.</Description>
+        <Identity Id="SDKStyle.Templates.Net.d94399f6-bb26-4b29-9867-7505d6d51486" Version="1.0" Language="en-US" Publisher="Dushyant Priyadarshee" />
+        <DisplayName>SDKStyle.Templates.Net</DisplayName>
+        <Description xml:space="preserve">VSIX Project containing SDKStyle.Templates.Net project templates.</Description>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
