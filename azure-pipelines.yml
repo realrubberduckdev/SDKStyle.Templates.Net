@@ -20,7 +20,7 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArguments: '/t:Restore /t:Rebuild /P:Version=1.0.$(Build.BuildId)'
+    msbuildArguments: '/t:Restore /t:Rebuild /P:Version=0.0.$(Build.BuildId)'
 
 - task: PublishBuildArtifacts@1
   inputs:
