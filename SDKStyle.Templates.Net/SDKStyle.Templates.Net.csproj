@@ -49,7 +49,11 @@
     <Compile Include="TemplatesPackage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProjectTemplates\ConsoleAppFrameworkSDK.zip">
+    <Content Include="ProjectTemplates\SDKStyle.ClassLibrary.Net.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\SDKStyle.ConsoleApp.Net.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
