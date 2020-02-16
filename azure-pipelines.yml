@@ -18,8 +18,8 @@ steps:
 - task: PowerShell@2
   displayName: 'Update vsixmanifest version'
   inputs:
-    script:
-      ./$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/UpdateVsixManifestVersion.ps1 0.0.$(Build.BuildId)
+    filePath: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/UpdateVsixManifestVersion.ps1'
+    arguments: '0.0.$(Build.BuildId)'
 
 - task: MSBuild@1
   inputs:
