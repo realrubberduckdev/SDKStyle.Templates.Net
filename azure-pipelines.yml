@@ -20,6 +20,7 @@ steps:
   inputs:
     filePath: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/UpdateVsixManifestVersion.ps1'
     arguments: '0.0.$(Build.BuildId)'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net'
 
 - task: MSBuild@1
   inputs:
