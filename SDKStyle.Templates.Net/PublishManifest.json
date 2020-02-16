@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json.schemastore.org/vsix-publish",
+    "categories": [
+        "visual studio extensions",
+        "other templates"
+    ],
+    "identity": {
+        "internalName": "SDKStyle.Templates.Net",
+        "tags": [
+            "Csharp template",
+            "SDK style",
+            "Project template",
+            ".Net framework project template"
+        ]
+    },
+    "overview": "README.md",
+    "priceCategory": "free",
+    "publisher": "rubberduckdev",
+    "private": true,
+    "qna": false,
+    "repo": "https://github.com/realrubberduckdev/SDKStyle.Templates.Net"
+}
