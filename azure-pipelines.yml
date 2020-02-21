@@ -24,7 +24,7 @@ steps:
   displayName: 'Update vsixmanifest version'
   inputs:
     filePath: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/UpdateVsixManifestVersion.ps1'
-    arguments: '$(GitVersion_SemVer)'
+    arguments: '$(GitVersion.SemVer)'
     workingDirectory: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net'
 
 - task: MSBuild@1
@@ -32,7 +32,7 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArguments: '/t:Restore /t:Rebuild /P:Version=$(GitVersion_SemVer)'
+    msbuildArguments: '/t:Restore /t:Rebuild /P:Version=$(GitVersion.SemVer)'
 
 - task: PublishBuildArtifacts@1
   inputs:
