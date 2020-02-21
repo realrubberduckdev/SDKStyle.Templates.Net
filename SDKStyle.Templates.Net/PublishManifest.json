@@ -17,6 +17,6 @@
     "priceCategory": "free",
     "publisher": "rubberduckdev",
     "private": true,
-    "qna": false,
+    "qna": true,
     "repo": "https://github.com/realrubberduckdev/SDKStyle.Templates.Net"
 }
