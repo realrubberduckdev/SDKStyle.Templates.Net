@@ -5,7 +5,7 @@
         "other templates"
     ],
     "identity": {
-        "internalName": "SDKStyle.Templates.Net",
+        "internalName": "SDKStyleTemplatesNet",
         "tags": [
             "Csharp template",
             "SDK style",
@@ -17,6 +17,6 @@
     "priceCategory": "free",
     "publisher": "rubberduckdev",
     "private": true,
-    "qna": false,
+    "qna": true,
     "repo": "https://github.com/realrubberduckdev/SDKStyle.Templates.Net"
 }

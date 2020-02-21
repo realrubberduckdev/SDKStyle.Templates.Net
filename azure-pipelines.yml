@@ -15,11 +15,16 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: GitVersion@5
+  inputs:
+    runtime: 'core'
+    configFilePath: '$(System.DefaultWorkingDirectory)/GitVersion.yml'
+    additionalArguments: '/targetpath $(System.DefaultWorkingDirectory)'
 - task: PowerShell@2
   displayName: 'Update vsixmanifest version'
   inputs:
     filePath: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net/UpdateVsixManifestVersion.ps1'
-    arguments: '0.0.$(Build.BuildId)'
+    arguments: '$(GitVersion.MajorMinorPatch)'
     workingDirectory: '$(System.DefaultWorkingDirectory)/SDKStyle.Templates.Net'
 
 - task: MSBuild@1
@@ -27,7 +32,7 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArguments: '/t:Restore /t:Rebuild /P:Version=0.0.$(Build.BuildId)'
+    msbuildArguments: '/t:Restore /t:Rebuild /P:Version=$(GitVersion.MajorMinorPatch)'
 
 - task: PublishBuildArtifacts@1
   inputs:
