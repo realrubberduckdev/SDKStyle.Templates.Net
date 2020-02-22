@@ -16,7 +16,13 @@
     "overview": "README.md",
     "priceCategory": "free",
     "publisher": "rubberduckdev",
-    "private": true,
+    "private": false,
     "qna": true,
-    "repo": "https://github.com/realrubberduckdev/SDKStyle.Templates.Net"
+    "repo": "https://github.com/realrubberduckdev/SDKStyle.Templates.Net",
+    "assetFiles": [
+        {
+            "pathOnDisk": "vs-screenshot.png",
+            "targetPath": "vs-screenshot.png"
+        }
+    ]
 }
